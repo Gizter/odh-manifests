@@ -143,7 +143,7 @@ data:
       </property>
       <property>
         <name>hive.metastore.warehouse.dir</name>
-        <value>s3a://warehouse</value>
+        <value>data</value>
       </property>
       <property>
         <name>fs.s3a.endpoint</name>
