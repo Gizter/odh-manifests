@@ -28,7 +28,7 @@ spec:
           - /hive-scripts/entrypoint.sh
         env:
           - name: HIVE_LOGLEVEL
-            value: "INFO"
+            value: "DEBUG"
           - name: S3_ENDPOINT
             value: $(s3_endpoint_url)
           - name: S3_ENDPOINT_URL_PREFIX
