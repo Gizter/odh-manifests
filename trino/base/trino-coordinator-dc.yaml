@@ -51,8 +51,8 @@ spec:
             secretName: trino-truststore
             defaultMode: 420
             items:
-              - key: localkeys.jks
-                path: localkeys.jks            
+              - key: trino-truststore.jks
+                path: trino-truststore.jks           
       containers:
         - resources:
             requests:
