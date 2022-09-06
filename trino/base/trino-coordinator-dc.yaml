@@ -46,6 +46,13 @@ spec:
             items:
               - key: hive.properties
                 path: hive.properties
+        - name: trino-truststore
+          secret:
+            secretName: trino-truststore
+            defaultMode: 420
+            items:
+              - key: localkeys.jks
+                path: localkeys.jks            
       containers:
         - resources:
             requests:
@@ -83,6 +90,8 @@ spec:
               mountPath: /etc/trino/prometheus
             - name: trino-catalogs-volume
               mountPath: /etc/trino/catalog
+            - name: trino-truststore
+              mountPath: /etc/trino/certs              
           image: trino
           args:
             - --config=/etc/trino/config-coordinator.properties
