@@ -97,9 +97,6 @@ data:
         <name>hive.server2.enable.doAs</name>
         <value>false</value>
       </property>
-      <property>
-        <name>hive.non-managed-table-writes-enabled</name>
-        <value>true</value>
       </property>
       <property>
         <name>hive.server2.use.SSL</name>
