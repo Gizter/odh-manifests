@@ -127,7 +127,16 @@ spec:
             name: hadoop-logs
           - mountPath: /hadoop-config
             name: hadoop-config
+          - mountPath: /s3-compatible-ca
+            name: trino-truststore
       volumes:
+        - name: trino-truststore
+          secret:
+            secretName: trino-truststore
+            defaultMode: 420
+            items:
+              - key: ca-bundle.crt
+                path: ca-bundle.crt
         - name: hive-config
           configMap:
             name: hive-config
@@ -146,7 +155,7 @@ spec:
           emptyDir: {}
         - name: hive-metastore-db-data
           emptyDir: {}
-        - name: hadoop-config
+        - name: hadoop-config 
           secret:
             defaultMode: 420
             secretName: hadoop-config
