@@ -142,8 +142,8 @@ data:
         <value>Parquet</value>
       </property>
       <property>
-          <name>fs.s3a.path.style.access</name>
-          <value>true</value>
+        <name>fs.s3a.path.style.access</name>
+        <value>true</value>
       </property>      
       <property>
         <name>hive.metastore.warehouse.dir</name>
