@@ -45,14 +45,7 @@ spec:
             defaultMode: 420
             items:
               - key: hive.properties
-                path: hive.properties
-        - name: trino-truststore
-          secret:
-            secretName: trino-truststore
-            defaultMode: 420
-            items:
-              - key: cacerts
-                path: cacerts           
+                path: hive.properties           
       containers:
         - resources:
             requests:
@@ -89,9 +82,7 @@ spec:
             - name: prometheus-exporter
               mountPath: /etc/trino/prometheus
             - name: trino-catalogs-volume
-              mountPath: /etc/trino/catalog
-            - name: trino-truststore
-              mountPath: /etc/alternatives/jre/lib/security             
+              mountPath: /etc/trino/catalog            
           image: trino
           args:
             - --config=/etc/trino/config-coordinator.properties
