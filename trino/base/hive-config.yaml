@@ -97,7 +97,6 @@ data:
         <name>hive.server2.enable.doAs</name>
         <value>false</value>
       </property>
-      <configuration>
       <property>
         <name>hive.non-managed-table-writes-enabled</name>
         <value>true</value>
