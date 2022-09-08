@@ -45,8 +45,8 @@ spec:
             secretName: trino-truststore
             defaultMode: 420
             items:
-              - key: trino-truststore
-                path: trino-truststore               
+              - key: cacerts
+                path: cacerts               
       containers:
         - resources:
             requests:
@@ -83,7 +83,7 @@ spec:
             - name: trino-catalogs-volume
               mountPath: /etc/trino/catalog
             - name: trino-truststore
-              mountPath: /etc/trino/certs              
+              mountPath: /etc/alternatives/jre/lib/security              
           image: trino
           args:
             - --config=/etc/trino/config-worker.properties
