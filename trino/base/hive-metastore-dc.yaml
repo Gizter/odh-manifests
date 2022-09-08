@@ -43,11 +43,6 @@ spec:
               secretKeyRef:
                 key: AWS_SECRET_ACCESS_KEY
                 name: $(s3_credentials_secret)
-          - name: S3_BUCKET_NAME
-            valueFrom:
-              secretKeyRef:
-                key: BUCKET
-                name: $(s3_credentials_secret)
           - name: S3_DATA_DIR
             value: "data"
           - name: DATABASE_USER
