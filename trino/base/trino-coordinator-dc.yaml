@@ -48,8 +48,8 @@ spec:
                 path: hive.properties
               - key: iceberg.properties
                 path: iceberg.properties
-              - key: delta-lake.properties
-                path: delta-lake.properties                
+              - key: deltalake.properties
+                path: deltalake.properties                
       containers:
         - resources:
             requests:
