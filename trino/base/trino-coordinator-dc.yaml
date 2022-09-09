@@ -45,7 +45,9 @@ spec:
             defaultMode: 420
             items:
               - key: hive.properties
-                path: hive.properties           
+                path: hive.properties
+              - key: iceberg.properties
+                path: iceberg.properties
       containers:
         - resources:
             requests:
