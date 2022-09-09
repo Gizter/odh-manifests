@@ -6,6 +6,8 @@ varReference:
     kind: Secret
   - path: stringData/iceberg.properties
     kind: Secret
+  - path: stringData/delta.properties
+    kind: Secret    
   - path: stringData/node.properties
     kind: Secret
   - path: metadata/annotations/volume.beta.kubernetes.io\/storage-class
