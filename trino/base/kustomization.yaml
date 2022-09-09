@@ -141,4 +141,4 @@ images:
     newTag: latest
   - name: trino
     newName: trinodb/trino
-    newTag: 'latest'
+    newTag: '373'
