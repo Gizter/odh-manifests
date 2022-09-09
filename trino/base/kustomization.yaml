@@ -140,5 +140,5 @@ images:
     newName: quay.io/cloudservices/ubi-hive
     newTag: latest
   - name: trino
-    newName: trinodb/trino
-    newTag: '373'
+    newName: image-registry.openshift-image-registry.svc:5000/damama-dev/trino
+    newTag: 'latest'
