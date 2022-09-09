@@ -50,6 +50,8 @@ spec:
                 path: iceberg.properties
               - key: delta.properties
                 path: delta.properties
+              - key: tpch.properties
+                path: tpch.properties                
         - name: truststore
           secret:
             secretName: hive-truststore
