@@ -97,7 +97,6 @@ data:
         <name>hive.server2.enable.doAs</name>
         <value>false</value>
       </property>
-      </property>
       <property>
         <name>hive.server2.use.SSL</name>
         <value>false</value>
