@@ -7,6 +7,8 @@ varReference:
   - path: stringData/iceberg.properties
     kind: Secret
   - path: stringData/delta.properties
+    kind: Secret
+  - path: stringData/tpch.properties
     kind: Secret    
   - path: stringData/node.properties
     kind: Secret
