@@ -49,7 +49,14 @@ spec:
               - key: iceberg.properties
                 path: iceberg.properties
               - key: delta.properties
-                path: delta.properties                
+                path: delta.properties
+        - name: truststore
+          secret:
+            secretName: hive-truststore
+            defaultMode: 420
+            items:
+              - key: cacerts
+                path: cacerts                
       containers:
         - resources:
             requests:
@@ -86,7 +93,9 @@ spec:
             - name: prometheus-exporter
               mountPath: /etc/trino/prometheus
             - name: trino-catalogs-volume
-              mountPath: /etc/trino/catalog            
+              mountPath: /etc/trino/catalog
+            - name: truststore
+              mountPath: /etc/ssl/certs            
           image: trino
           args:
             - --config=/etc/trino/config-coordinator.properties
