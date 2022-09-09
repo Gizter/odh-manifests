@@ -138,7 +138,7 @@ images:
     newTag: latest
   - name: hive-metastore
     newName: quay.io/cloudservices/ubi-hive
-    newTag: 2.3.3-002
+    newTag: latest
   - name: trino
-    newName: quay.io/opendatahub/trino
-    newTag: '361'
+    newName: trinodb/trino
+    newTag: 'latest'
