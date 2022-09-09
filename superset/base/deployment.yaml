@@ -75,6 +75,8 @@ spec:
         volumeMounts:
           - mountPath: /etc/superset
             name: superset-config
+          - mountPath: /etc/ssl/certs
+            name: trino-truststore        
         resources:
           requests:
             cpu: $(superset_cpu_requests)
@@ -88,3 +90,10 @@ spec:
           configMap:
             name: superset-config-py
             defaultMode: 420
+        - name: trino-truststore
+          secret:
+            secretName: trino-truststore
+            defaultMode: 420
+            items:
+              - key: ca-bundle.crt
+                path: ca-bundle.crt 
