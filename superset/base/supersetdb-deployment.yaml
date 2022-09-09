@@ -63,7 +63,16 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/pgsql/data
           name: "supersetdb-data"
+        - mountPath: /etc/ssl/certs
+          name: "trino-truststore"  
       volumes:
       - name: "supersetdb-data"
         persistentVolumeClaim:
           claimName: supersetdb-data
+        - name: trino-truststore
+          secret:
+            secretName: trino-truststore
+            defaultMode: 420
+            items:
+              - key: ca-bundle.crt
+                path: ca-bundle.crt 
