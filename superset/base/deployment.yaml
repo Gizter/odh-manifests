@@ -43,6 +43,8 @@ spec:
         volumeMounts:
           - mountPath: /etc/superset
             name: superset-config
+          - mountPath: /etc/ssl/certs
+            name: trino-truststore  
       containers:
       - name: superset
         env:
