@@ -97,7 +97,7 @@ spec:
             - name: trino-catalogs-volume
               mountPath: /etc/trino/catalog
             - name: truststore
-              mountPath: /etc/ssl/certs            
+              mountPath: /opt/java/openjdk/lib/security            
           image: trino
           args:
             - --config=/etc/trino/config-coordinator.properties
